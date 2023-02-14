@@ -1,5 +1,5 @@
 {% set name = "seaborn-image" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/seaborn-image-{{ version }}.tar.gz
-  sha256: 926ae5c54b8834d109676ccb2f1ff809426160435c0b700f107b9ec083b68635
+  sha256: aeb77f62f74f0ab50d8e70b132a2ae461aefaab7e523187fd45447f893b836fd
 
 build:
   number: 0
@@ -19,9 +19,9 @@ requirements:
   host:
     - pip
     - poetry
-    - python >=3.8
+    - python >=3.8,<3.11
   run:
-    - python >=3.8
+    - python >=3.8,<3.11
     - importlib_metadata
     - matplotlib-base
     - matplotlib-scalebar

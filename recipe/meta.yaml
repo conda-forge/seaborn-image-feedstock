@@ -1,5 +1,5 @@
 {% set name = "seaborn-image" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/seaborn-image-{{ version }}.tar.gz
-  sha256: aeb77f62f74f0ab50d8e70b132a2ae461aefaab7e523187fd45447f893b836fd
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 74f3816b7ba06c8a86a958b7fda4a935a092291f988f2c681ef88438228a98c9
 
 build:
   number: 0

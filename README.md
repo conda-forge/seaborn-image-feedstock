@@ -1,11 +1,11 @@
-About seaborn-image
-===================
+About seaborn-image-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/seaborn-image-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/SarthakJariwala/seaborn-image
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/seaborn-image-feedstock/blob/main/LICENSE.txt)
 
 Summary: Attractive, descriptive and effective image visualization with seaborn-like API built on top of matplotlib
 

@@ -11,7 +11,7 @@ source:
   sha256: 8fb753f9ec5d70f9633e47ad910f18072e4882c7b6c31186bb1619f7cec9616b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,10 +19,9 @@ requirements:
   host:
     - pip
     - poetry
-    - python >=3.8,<3.11
+    - python >=3.8,<3.13
   run:
-    - python >=3.8,<3.11
-    - importlib_metadata
+    - python >=3.8,<3.13
     - matplotlib-base
     - matplotlib-scalebar
     - palettable

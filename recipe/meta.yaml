@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: fdf40dceb79013da08e1ba0175db2241ab52946a00e4862e9274ea9c45603521
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,9 +19,9 @@ requirements:
   host:
     - pip
     - poetry
-    - python >=3.8,<3.13
+    - python {{ python_min }}
   run:
-    - python >=3.8,<3.13
+    - python >={{ python_min }},<3.13
     - matplotlib-base
     - matplotlib-scalebar
     - palettable
@@ -30,6 +30,8 @@ requirements:
     - scipy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - seaborn_image
 

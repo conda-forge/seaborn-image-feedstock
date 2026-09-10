@@ -1,5 +1,5 @@
 {% set name = "seaborn-image" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 
 package:
@@ -7,27 +7,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: fdf40dceb79013da08e1ba0175db2241ab52946a00e4862e9274ea9c45603521
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 525b5574ea19ea93aa742fe70e12697a82e9dbdf826856b214c6d19f655e6fba
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
+    - hatch-vcs
+    - hatchling
     - pip
-    - poetry
     - python {{ python_min }}
   run:
-    - python >={{ python_min }},<3.13
-    - matplotlib-base
-    - matplotlib-scalebar
-    - palettable
-    - pooch
+    - python >={{ python_min }},<3.15
+    - matplotlib-base >=3.7
+    - matplotlib-scalebar >=0.7.0,<0.9.0
+    - numpy >=1.26
+    - palettable >=3.3.0
+    - pooch >=1.2.0
     - scikit-image >=0.17.2
-    - scipy
+    - scipy >=1.5.1
 
 test:
   requires:
